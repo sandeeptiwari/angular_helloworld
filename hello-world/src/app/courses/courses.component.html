@@ -1,0 +1,13 @@
+<!-- DOCTYPE -->
+<div>
+    <span><button class="btn btn-primary" (click)="showCourse()" [class.active]="isShowCourceActive">Show Courses</button></span>
+    <span><button class="btn btn-primary" (click)="addCource()" [class.active]="isAddCourceActive">Add Course</button></span>
+    <div class="add-cource-container" *ngIf="addCourse">
+        <input id="course" type="text" [value]="defaultCourse"><i class="fas fa-check"></i>
+    </div>
+
+    <ul class="custom-list">
+        <li *ngFor="let item of courses" >{{item | coursename:10}}</li>
+    </ul>
+
+</div>
