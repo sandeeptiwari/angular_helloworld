@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <ul class="navbar-nav">
+    <li class="nav-item" [class.active]="viewMode=='map'">
+      <a class="nav-link" (click)="viewMode='map'" href="#">Map View</a>
+    </li>
+    <li class="nav-item" [class.active]="viewMode=='list'">
+      <a class="nav-link" (click)="viewMode='list'" href="#">List View</a>
+    </li>
+  </ul>
+</nav>
+
+<div [ngSwitch]="viewMode" style="padding-top:70px;">
+  <div *ngSwitchCase="'map'">Map View </div>
+  <div *ngSwitchCase="'list'">List View Mode</div>
+  <div *ngSwitchDefault>Other view </div>
+</div>
